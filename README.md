@@ -35,7 +35,12 @@ source .venv/bin/activate  # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-4. **Запусти сервер**
+4. **Создай .env файл**
+```
+JWT_SECRET_KEY=JWT_SECRET_KEY
+```
+
+5. **Запусти сервер**
 
 ```bash
 uvicorn app.main:app --reload
@@ -47,13 +52,18 @@ uvicorn app.main:app --reload
 
 ### Запуск с помощью Docker
 
-1. **Построй образ**
+1. **Создай .env файл**
+```
+JWT_SECRET_KEY=JWT_SECRET_KEY
+```
+
+2. **Построй образ**
 
 ```bash
 docker build . --tag url_alias_app
 ```
 
-2. **Запусти контейнер**
+3. **Запусти контейнер**
 
 ```bash
 docker run -p 80:80 url_alias_app
