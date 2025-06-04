@@ -1,0 +1,7 @@
+venv
+Dockerfile
+shortener.db
+README.md
+.idea
+__pycache__
+.gitignore
